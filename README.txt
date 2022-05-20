@@ -16,5 +16,9 @@ git branch -M main (selects the branch)
 git remote add origin <link to repo>
 git push -u origin main
 
+To see the commit log:
+git log --oneline
+To move the header to the previous commit (i.e. move back by one):
+git reset --hard HEAD~1
 
 Keep code cohesive and uncoupled.
