@@ -5,7 +5,7 @@ class Collection(models.Model):
     name = models.CharField(max_length=255)
 
 class Warehouse(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255) 
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
@@ -18,12 +18,12 @@ class Product(models.Model):
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
     warehouse = models.ForeignKey(Warehouse, on_delete=models.PROTECT, null=True)
     
-
-class Address(models.Model):
-    street_address = models.TextField(max_length=255)
-    zip_code = models.TextField(max_length=10, default='ERROR')
-    unit_number = models.IntegerField()
-    city_name = models.TextField(max_length=255)
-    country_or_province = models.TextField(max_length=255)
-    country = models.TextField(max_length=255)
-    warehouse = models.OneToOneField(Warehouse, on_delete=models.CASCADE, primary_key=True)
+#Maybe add if time allows:
+#class Address(models.Model):
+#    street_address = models.TextField(max_length=255)
+#    zip_code = models.TextField(max_length=10, default='ERROR')
+#    unit_number = models.IntegerField()
+#    city_name = models.TextField(max_length=255)
+#    country_or_province = models.TextField(max_length=255)
+#    country = models.TextField(max_length=255)
+#    warehouse = models.OneToOneField(Warehouse, on_delete=models.CASCADE, primary_key=True)
