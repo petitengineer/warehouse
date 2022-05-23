@@ -4,6 +4,9 @@ from django.db import models
 class Collection(models.Model):
     name = models.CharField(max_length=255)
 
+class Warehouse(models.Model):
+    name = models.CharField(max_length=255)
+
 class Product(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(default="-")
@@ -13,15 +16,12 @@ class Product(models.Model):
     last_update = models.DateTimeField(auto_now = True) #indicates date-time of last edit
     shelving_unit =  models.CharField(max_length=3)
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
-
-class Warehouse(models.Model):
-    name = models.CharField(max_length=255)
-    square_footage = models.DecimalField(max_digits=8, decimal_places=5)
+    warehouse = models.ForeignKey(Warehouse, on_delete=models.PROTECT, null=True)
     
 
 class Address(models.Model):
     street_address = models.TextField(max_length=255)
-    zip_code = models.TextField(max_length=10)
+    zip_code = models.TextField(max_length=10, default='ERROR')
     unit_number = models.IntegerField()
     city_name = models.TextField(max_length=255)
     country_or_province = models.TextField(max_length=255)
