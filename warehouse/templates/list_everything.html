@@ -1,12 +1,12 @@
 <h1>Product(s)</h1>
     <ul>
         {% for product in products %}
-        <li>{{ product.title }}</li>
+        <li> id: {{ product.id }}, title: {{ product.title }}, description: {{ product.description }}, unit price: {{ product.unit_price }}$, inventory: {{ product.inventory }}, last update: {{ product.last_update }}, shelving unit: {{ product.shelving_unit }}, warehouse id: {{ product.warehouse_id }} </li>
         {% endfor %}    
     </ul>
 <h1>Warehouse(s)</h1>
     <ul>
         {% for warehouse in warehouses %}
-        <li>{{ warehouse.name }}</li>
+        <li>id: {{ warehouse.id }}, name: {{ warehouse.name }}</li>
         {% endfor %}
     </ul>
