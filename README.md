@@ -5,7 +5,7 @@ It is also my first ever web application. I used it to help myself better unders
 
 ## HOW TO USE THIS WEB APPLICATION
 
-This section has been intentionally left blank because I have not yet completed the application. I will update it later.
+Please see the README on Replit. Since this a public repo, I won't be making the full read me available here. Thank you for taking the time to review my application. :)
 
 ## NOTES FOR SELF
 **How to guide for Git**
